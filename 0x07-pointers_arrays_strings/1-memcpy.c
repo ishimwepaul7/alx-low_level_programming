@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _memcpy - Entry point
  * @dest: input
