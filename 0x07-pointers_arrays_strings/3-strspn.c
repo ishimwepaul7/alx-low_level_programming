@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _strspn - Entry point
  * @s: input
