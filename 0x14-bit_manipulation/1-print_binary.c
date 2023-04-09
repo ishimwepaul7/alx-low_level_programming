@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * printf_binary - print an usigned int - Entry point
+ * print_binary - print an usigned int - Entry point
  * @n: number to print in binary
  * Return: 0
  */
