@@ -1,27 +1,42 @@
-#include "main.h"
+#include <unistd.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * read_textfile -print to STDOUT
  * @filename: being read
  * @letters: letters to be read
- * Return: w-actual number of bytes read and printed 0 when function fails or filename is NULL.
+ * Return: 0
  */
-sszize_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *buf;
-	ssize_t fd;
-	ssize_t w;
-	ssize_t t;
+	int zf, mno, zki;
+	char *cf;
 
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
+	if (filename == NULL)
 		return (0);
-	buf = malloc(sizeof(char) * letters);
-	t = read(fd, buf, letters);
-	w = write(STDOUT_FILEnO, buf, t);
 
-	free(buf);
-	close(fd);
-	return (w);
+
+	zf = open(filename, O_RDONLY);
+
+	if (zf == -1)
+		return (0);
+
+	cf = malloc(sizeof(char) * letters + 1);
+	if (cf == NULL)
+		return (0);
+
+	mno = read(zf, cf, letters);
+	if (mno == -1)
+		return (0);
+
+	cf[letters] = '\0';
+
+	zki = write(1, cf, mno);
+	if (zki == -1)
+		return (0);
+
+	close(zf);
+	free(cf);
+	return (zki);
 }
