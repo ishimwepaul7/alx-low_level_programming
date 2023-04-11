@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * read_textfile -print to STDOUT
+ * read_textfile - Entry point
  * @filename: being read
  * @letters: letters to be read
  * Return: 0
