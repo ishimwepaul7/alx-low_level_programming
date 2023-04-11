@@ -7,7 +7,7 @@
  * @m: input number 2
  *Return: 0 ehe value
  */
-unsigned int flip_bits(unsigned long it n, unsigned long int m)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	int num = 0;
 	int x = 0;
@@ -16,7 +16,7 @@ unsigned int flip_bits(unsigned long it n, unsigned long int m)
 	for (; x <= 63; x++)
 	{
 		if (((n ^ m) >> x) & 1)
-			num++
+			num++;
 	}
 	return (num);
 }
