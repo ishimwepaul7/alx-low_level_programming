@@ -4,8 +4,11 @@
 
 /**
  * main - check the code
+ * @ac: srguments counter
+ * @av: array for arguments
  *
- * Return: Always 0.
+ * Return: 1 on success, -1 on failure
+ * or if filename is NULL
  */
 int main(int ac, char **av)
 {
