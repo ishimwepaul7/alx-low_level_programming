@@ -29,7 +29,7 @@ int close_errchk(int md)
  *
  * @md1: first descriptor to close
  * @md2: second descriptor to close
- * @filename filename prompting the error
+ * @filename: filename prompting the error
  *
  * Return: 99
  */
@@ -99,7 +99,7 @@ int main(int ac, char *av[])
 		if (lenr == -1)
 			return (read_err(file_from, file_to, av[1]));
 		lenw = write(file_to, buf, lenr);
-		if (lenw == -1 || lenw !=lenr)
+		if (lenw == -1 || lenw != lenr)
 			return (write_err(file_from, file_to, av[2]));
 	} while (lenr == 1024);
 	err = close_errchk(file_from);
