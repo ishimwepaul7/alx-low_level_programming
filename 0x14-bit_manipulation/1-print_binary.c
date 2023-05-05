@@ -8,15 +8,21 @@
  */
 void print_binary(unsigned long int i)
 {
-	int t, flag;
+	int t, flag = 0;
+	unsigned long int cur;
 
-	if (i == 0)
-		_putchar('0');
-	for (flag = 0, t = sizeof(i) * 8 - 1; t >= 0; t--)
+	for (t = 63; t >= 0; t--)
 	{
-		if ((i >> t) & 1)
-			flag = 1;
-			if (flag == 1)
-				((i >> t) & 1) ? _putchar('1') : _putchar('0');
+		cur = i >> t;
+
+		if (cur & 1)
+		{
+			_putchar('1');
+			flag++;
+		}
+		else if (flag)
+			_putchar('0');
 	}
+	if (!flag)
+		_putchar('0');
 }
