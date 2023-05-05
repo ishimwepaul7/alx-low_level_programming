@@ -13,6 +13,9 @@ unsigned int binary_to_uint(const char *y)
 	int et = 1, t = 0;
 
 	if (y == NULL)
+		return (0);
+
+	while (y[t + 1])
 	{
 		if (y[t] != '0' && y[t] != '1')
 			return (0);
