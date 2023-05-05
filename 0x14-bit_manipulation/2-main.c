@@ -11,7 +11,7 @@ int main(void)
 	int i;
 
 	i = get_bit(1024, 10);
-	printf("%d\n"n i);
+	printf("%d\n", i);
 	i = get_bit(98, 1);
 	printf("%d\n", i);
 	i = get_bit(1024, 0);
