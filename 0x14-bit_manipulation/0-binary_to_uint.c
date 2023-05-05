@@ -4,8 +4,8 @@
 
 /**
  * binary_to_uint - Entry point
- * @y: constant char
- * Return: 0;
+ * @y: const char
+ * Return: 0
  */
 unsigned int binary_to_uint(const char *y)
 {
